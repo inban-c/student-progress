@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <meta content="" name="description">
+     <meta content="" name="keywords">
+     <title>Portal</title>
+     {% load static %}
+     <link rel="stylesheet" href="{% static 'css/home.css'%}">
+     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+
+
+ </head>
+ <body class="bg-info">
+      
+      <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  ">
+    <div class="container d-flex align-items-center justify-content-between">
+        {% block content %}
+      <h1 class="logo">Welcome!</h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li class="dropdown"><a href="#"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+             
+              <li class="dropdown"><a href="#"><span>View</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Gokulnath</a></li>
+                  <li><a href="#">Sabari</a></li>
+                  <li><a href="#">Inban</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="faculty" >...</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9 text-center">
+                <h1>Django result portal</h1>
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="signup" class="btn-get-started scrollto">Sign up</a>
+          </div>
+    
+          <div class="row icon-boxes">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 " data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box ">
+                <div class="icon"><i class="ri-stack-line"></i></div>
+                <h4 class="title"><a href="student">Students</a></h4>
+                <p class="description">Students can view their grades and marks</p>
+              </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-palette-line"></i></div>
+                <h4 class="title"><a href="faculty">Teachers</a></h4>
+                <p class="description">Teachers can uploade marks for the students</p>
+              </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-command-line"></i></div>
+                <h4 class="title"><a href="admin/">Admin</a></h4>
+                <p class="description">Admin can create and manage the accounts</p>
+              </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-fingerprint-line"></i></div>
+                <h4 class="title"><a href="https://youtu.be/-ea94uMFVfU">Learn</a></h4>
+                <p class="description">you can learn Django by watching this tutorial</p>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </section><!-- End Hero -->
+    
+      <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about bg-light">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-title">
+              <h2>About Us</h2>
+              <p>mini project</p>
+            </div>
+    
+            <div class="row content">
+              <div class="col-lg-6">
+                <p>
+                  We Students of..
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i>Kalaignarkarunanidhi Institute of Technology</li>
+                  <li><i class="ri-check-double-line"></i>An Autonomous Institution</li>
+                  <li><i class="ri-check-double-line"></i>Coimbatore</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0">
+                <p>
+                 
+                </p>
+                <a href="#" class="btn-learn-more">Learn More</a>
+              </div>
+            </div>
+    
+          </div>
+        </section><!-- End About Section -->
+
+          <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Team</h2>
+            <pre> 
+            Gokulnath(711521bcb018)
+            Inban(711521bcb020)
+            Sabari(711521bcb044)
+            </pre>
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="member">
+                <div class="member-img">
+                  <img src="" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Department of</h4>
+                  <span>Computer Science & Business Systems</span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+              <div class="member">
+                <div class="member-img">
+                  <img src="" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                
+            </div>
+  
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+              <div class="member">
+                <div class="member-img">
+                  <img src="" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>......</h4>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Team Section -->
+  
+       <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact bg-light">
+    
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form action="mailto:kitcbe.25.21bcb020@gmail.com" method="post" role="form">
+            <div class="row gy-2 gx-md-3">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group col-12">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group col-12">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3 col-12">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center col-12"><button type="submit">Send Message</button></div>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstarp</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://stackoverflow.com/questions/tagged/reactjs">Stack overflow</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://www.w3schools.com/react/default.asp">W3school.com</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://www.youtube.com/">Youtube</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://code.visualstudio.com/">vs code</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+</footer><!-- End Footer -->
+
+<!--Script Main.js file -->
+    <script src="index.js"></script>
+ </body>
+</html>

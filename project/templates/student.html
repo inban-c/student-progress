@@ -1,0 +1,98 @@
+
+<html>
+<head>
+    <title>Login Form</title> 
+    <style type="text/css">
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color:#c7eff8;
+    font-family: 'Arial';
+}
+.login{
+        width: 382px;
+        position: fixed;
+        top: 15%;
+        left: 3%;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background-color:#929494;
+        border-radius: 15px ;
+        box-shadow: 0 0 32px 0 #2487ce;
+
+}
+h2{
+    text-align: center;
+    color: #053172;
+    padding: 20px;
+}
+label{
+    color: #053172;
+    font-size: 17px;
+}
+#Uname{
+    width: 38vh;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 38vh;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#log{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-right: 15px;
+    color:#053172;
+
+
+}
+
+a{
+    float: right;
+}
+
+form{
+    padding-bottom:10%;
+}
+input[type=text]{
+    color: #053172;;
+}
+
+</style>
+</head>
+<body>
+   
+    <div class="login" >
+
+        <h2> Student Login Page</h2><br>
+        <form id="login" method="POST" action="stdlogin" autocomplete="off" >
+              {% csrf_token %}
+        <label><b>Registration Id
+        </b>
+        </label>
+        <input type="text" id="Uname" name="reg" placeholder="Username" required>
+        <br><br>
+        <label><b>Password
+        </br>
+        </label>
+        <input type="Password" id="Pass" name="pas" placeholder="Password" required>
+        <br><br>
+        <input type="submit" id="log" value="Log In ">
+        <br><br>
+    <a href="stdsignup">Forget Password</a>
+    </form>
+</div>
+</body>
+</html>   

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachers Marks Entry</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #c7eff8;
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+
+    .container {
+      background-image:url('https://cdn.wallpapersafari.com/24/66/jVJNKu.png');
+      max-width: 500px;
+      margin: 0 auto;
+      padding-top: 100px;
+      box-shadow: 0 0 35px 0 #2487ce;
+    }
+
+    .form-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .btn-submit {
+      margin-top: 20px;
+    }
+    label,h1{
+      color:black
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="form-heading">Teachers Marks Entry</h1>
+
+    <form method="POST" ACTION="csbs2" autocomplete="off">
+         {% csrf_token %}
+      <div class="form-group">
+        <label for="registerNumber">Register Number</label>
+        <input type="text" class="form-control" id="registerNumber" NAME="reg" placeholder="Enter student register number" required>
+      </div>
+     <div>
+        <label >Dm</label>
+        <input type="text" class="form-control" id="mark" name="m1" placeholder="Enter student mark" required>
+      </div>
+      <div class="form-group">
+        <label >Oops</label>
+        <input type="text" class="form-control" id="mark" name="m2" placeholder="Enter student mark" required>
+      </div>
+      <div class="form-group">
+        <label >Dbms</label>
+        <input type="text" class="form-control" id="mark" name="m3" placeholder="Enter student mark" required>
+      </div>
+      <div class="form-group">
+        <label >Os</label>
+        <input type="text" class="form-control" id="mark"  name="m4"placeholder="Enter student mark" required>
+      </div>
+      <div class="form-group">
+        <label >Ds</label>
+        <input type="text" class="form-control" id="mark"  name="m5"placeholder="Enter student mark" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-submit">Submit</button>
+
+    </form>
+  </div>
+</body>
+
+</html>
