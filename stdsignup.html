@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="student.css">
+    <title>StudentPage</title>
+    <style type="text/css">
+   .wrapper{
+       height: 50vh;
+       width: 120vh;
+       position: fixed;
+       top: 10%;
+       left: 20%;
+    }
+    body{
+      background-image: url('https://png.pngtree.com/background/20211217/original/pngtree-welcome-back-to-school-education-frame-border-background-picture-image_1598471.jpg');
+      background-repeat: no-repeat;
+      background-size: 200vh 115vh;
+
+      }
+      label{
+        color: black;
+      }
+      input[type=text]{
+        border: 2px solid black;
+      }
+      input[type=password]{
+        border: 2px solid black;
+      }
+      #select{
+        border: 2px solid black;
+      }
+      #new
+      {
+        color: black;
+      }
+    </style>
+</head>
+   <body>
+    <div class='wrapper d-flex bg-transparent align-item-center justify-content-center'>
+        <div class="col-md-offset-6 col-md-5">
+            <form action="Ssignup" method="POST" autocomplete="off" class="text-muted">
+               {% csrf_token %}
+            <h2 class="page-header text-center btn-Light" id="new"> Student Register..</h2>
+           <div class="form-group btn-Light w-20 p-3">
+            <label for="name">Name:</label>
+            <input type="text" name="sname" placeholder="Enter name" class="form-control" required>
+           </div> 
+           <div class="form-group btn-Light w-20 p-3">
+            <label for="reg">Register No:</label>
+            <input type="text" name="reg" placeholder="Enter Register number..." class="form-control" required>
+           </div>
+           <div class="form-group btn-Light w-20 p-3">
+            <label for="sub">Department:</label>
+             <select name="dept" id="select" class="form-control">
+                <option value="CSBS">CSBS</option>
+                 <option value="AIDS">AIDS</option>
+                 <option value="CSE">CSE</option>
+             </select>
+           </div>
+           <div class="form-group btn-Light w-20 p-3">
+            <label for="class">Year</label>
+            <input type="text" name="class" class=" form-control" placeholder="Enter your class" required>
+           </div>
+           <div class="form-group btn-Light w-20 p-3">
+            <label for="pwd">Password:</label>
+            <input type="password" name="spwd" placeholder="Enter password.." class="form-control" required>
+           </div>
+           <div class="form-group pull-right">
+              <input type="submit"  class="btn btn-primary">
+              <input type="reset" value="Clear" class="btn btn-danger">
+           </div>
+            </form>
+
+        </div>
+    </div>
+   </body>
+</html>

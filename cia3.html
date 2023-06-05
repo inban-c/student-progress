@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c7eff8;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            position: fixed;
+            top: 25%;
+            left: 15%;
+            box-shadow: 0 0 60px 0 #2487ce;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #053172;
+            color: #fff;
+        }
+        
+        #btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #0f5be7;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #dmp {
+            font-weight: bold;
+        }
+        #bt{
+            position: fixed;
+            top: 62%;
+            left: 82%;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <form action="cia3" method="GET">
+            <table border="1">
+                {% for x in n %}
+                <tr aria-colspan="2">
+                    <th>
+                        {% for z in y %}
+                        Name: {{ z.Sname }}<br>
+                        {% endfor %}
+                        Reg: {{ x.Reg }}
+                    </th>
+                    <th>
+                        Marks
+                    </th>
+                    <th>
+                        Progress
+                    </th>
+                </tr>
+                <tr>
+                    <td>Dm</td>
+                    <td id="dm">{{ x.Dm }}</td>
+                    <td >
+            
+                        {% if 35 > x.Dm  %}
+                        Poor performance,Concentrate more
+                        
+                    </td>
+                    <td >
+                        {% elif  x.Dm >= 35 and 75 > x.Dm  %}
+                        Good,need improvement
+                    </td>
+                    <td >
+                        {% elif 85 > x.Dm and x.Dm >= 75   %}
+                         very Good,need more hardwork
+                    </td>
+                    <td >
+                        {% else  %}
+                        Excellent,keep it up
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oops</td>
+                    <td>{{ x.Oops }}</td>
+                        <td id="opp">
+                            
+                            {% if 35 > x.Oops %}
+                            Poor performance,Concentrate more
+                            
+                        </td>
+                        <td id="dmp">
+                            {% elif  x.Oops >= 35 and 75 > x.Oops   %}
+                            Good,need improvement
+                        </td>
+                        <td id="dmp">
+                            {% elif 85 > x.Oops and x.Oops >= 75   %}
+                             very Good,need more hardwork
+                        </td>
+                        <td id="dmp">
+                            {% else  %}
+                            Excellent,keep it up
+                            {% endif %}
+                        </td>
+                </tr>
+                <tr>
+                    <td>Dbms</td>
+                    <td>{{ x.Dbms }}</td>
+                        <td id="dbp">
+                            {% if 35 > x.Dbms  %}
+                            Poor performance,Concentrate more
+                            
+                        </td>
+                        <td id="dmp">
+                            {% elif   x.Dbms >= 35 and 75 > x.Dbms %}
+                            Good,need improvement
+                        </td>
+                        <td id="dmp">
+                            {% elif  x.Dbms >= 75 and 85 > x.Dbms   %}
+                             very Good,need more hardwork
+                        </td>
+                        <td id="dmp">
+                            {% else  %}
+                            Excellent,keep it up
+                            {% endif %}
+                        </td>
+                </tr>
+                <tr>
+                    <td>Os</td>
+                    <td>{{ x.Os }}</td>
+                           <td id="osp">
+                            
+                    
+                                {% if 35 > x.Os  %}
+                                Poor performance,Concentrate more
+                                
+                            </td>
+                            <td id="dmp">
+                                {% elif  x.Os > 35 and 75 > x.Os   %}
+                                Good,need improvement
+                            </td>
+                            <td id="dmp">
+                                {% elif 85 > x.Os and x.Os >= 75   %}
+                                 very Good,need more hardwork
+                            </td>
+                            <td id="dmp">
+                                {% else  %}
+                                Excellent,keep it up
+                                {% endif %}
+                            </td>
+                </tr>
+                <tr>
+                    <td>Ds</td>
+                    <td>{{ x.Ds }}</td>
+                        <td id="dsp">
+                            {% if 35 > x.Ds  %}
+                            Poor performance,Concentrate more
+                            
+                        </td>
+                        <td id="dmp">
+                            {% elif  x.Ds > 35 and  75 > x.Ds   %}
+                            Good,need improvement
+                        </td>
+                        <td>
+                            {% elif 85 > x.Ds and x.Ds >= 75   %}
+                             very Good,need  more hardwork
+                        </td>
+                        <td >
+                            {% else  %}
+                            Excellent,keep it up
+                            {% endif %}
+                        </td>
+                </tr>
+                   {% endfor %}
+            </table>
+        </form>
+       
+    </div>
+</body>
+</html>

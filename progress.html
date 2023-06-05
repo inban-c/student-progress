@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            text-align: center;
+        }
+        .left {
+          float: left;
+          width: 50%;
+          height: 100vh;
+        }
+        
+        .con{
+            position: fixed;
+            top: 6%;
+            left: 0%;
+            width: 40%;
+
+        }
+       
+        table {
+             margin: 0;
+             width: 120%;
+             border-collapse: collapse;
+             margin-left: auto;
+             margin-right: auto;
+             background-color: #fff;
+         }
+            
+        th, td {
+            padding: 15px;
+            text-align: left;
+            line-height: 100px;
+         }
+            
+         th {
+            background-color: #1152ca;
+            color: #fff;
+        }
+     
+        .right {
+           float: right;
+           width: 50%;
+          
+           height: 100vh;
+           text-align: center;
+
+        }
+
+        .rcon{
+            position: fixed;
+            left: 51%;
+            top: 17%;
+
+        }
+        body{
+            background-color: #c7eff8;
+        }
+    
+      </style>
+</head>
+<body>
+    <div class="left">
+        <div class="con">
+        <table border="2">
+        <tr>
+            <th>Exam\sub</th>
+             <th>DM</th>
+             <th>OOPS</th>
+             <th>DBMS</th>
+             <th>OS</th>
+             <th>DS</th>
+        </tr>
+        <tr>
+            {% for i in a %}
+            <th>CIA-1</th>
+            <td>{{i.Dm}}</td>
+            <td>{{i.Oops}}</td>
+            <td>{{i.Dbms}}</td>
+            <td>{{i.Os}}</td>
+            <td>{{i.Ds}}</td>
+            
+        </tr>
+        <tr>
+            {% for j in b %}
+            <th>CIA-2</th>
+            <td>{{j.Dm}}</td>
+            <td>{{j.Oops}}</td>
+            <td>{{j.Dbms}}</td>
+            <td>{{j.Os}}</td>
+            <td>{{j.Ds}}</td>
+           
+        </tr>
+        <tr>
+            {% for k in c %}
+            <th>CIA-3</th>
+            <td>{{k.Dm}}</td>
+            <td>{{k.Oops}}</td>
+            <td>{{k.Dbms}}</td>
+            <td>{{k.Os}}</td>
+            <td>{{k.Ds}}</td>
+  
+           
+        </tr>
+        <tr>
+            <th>Progress</th>
+            <td>
+                {% with a=i.Dm|add:j.Dm c=k.Dm %}
+                {% if  a|add:c >= 280 %}
+                   <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
+                {% elif 279 >= a|add:c and a|add:c > 250 %}
+                <p>&#11088 &#11088 &#11088 &#11088 </p>
+                {% elif 250 >= a|add:c  and a|add:c >= 200 %}
+                <p>&#11088 &#11088 &#11088</p>
+                {% elif 200 > a|add:c and a|add:c >= 100 %}
+                <p>&#11088 &#11088 </p>  
+                {% else %} 
+                <p>&#11088  &#11088</p>
+                {% endif %}
+                {% endwith %}
+            </td>
+            <td>
+                {% with a=i.Oops|add:j.Oops c=k.Oops %}
+                {% if  a|add:c >= 280 %}
+                   <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
+                {% elif 279 >= a|add:c and a|add:c > 250 %}
+                <p>&#11088 &#11088 &#11088 &#11088 </p>
+                {% elif 250 >= a|add:c  and a|add:c >= 200 %}
+                <p>&#11088 &#11088 &#11088</p>
+                {% elif 200 > a|add:c and a|add:c >= 100 %}
+                <p>&#11088 &#11088 </p>  
+                {% else %} 
+                <p>&#11088  &#11088</p>
+                {% endif %}
+                {% endwith %}
+            </td>
+            <td>
+                {% with a=i.Dbms|add:j.Dbms c=k.Dbms %}
+                {% if  a|add:c >= 280 %}
+                   <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
+                {% elif 279 >= a|add:c and a|add:c > 250 %}
+                <p>&#11088 &#11088 &#11088 &#11088 </p>
+                {% elif 250 >= a|add:c  and a|add:c >= 200 %}
+                <p>&#11088 &#11088 &#11088</p>
+                {% elif 200 > a|add:c and a|add:c >= 100 %}
+                <p>&#11088 &#11088 </p>  
+                {% else %} 
+                <p>&#11088  &#11088</p>
+                {% endif %}
+                {% endwith %}
+            </td>
+            <td>
+                {% with a=i.Os|add:j.Os c=k.Os %}
+                {% if  a|add:c >= 280 %}
+                   <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
+                {% elif 279 >= a|add:c and a|add:c > 250 %}
+                <p>&#11088 &#11088 &#11088 &#11088 </p>
+                {% elif 250 >= a|add:c  and a|add:c >= 200 %}
+                <p>&#11088 &#11088 &#11088</p>
+                {% elif 200 > a|add:c and a|add:c >= 100 %}
+                <p>&#11088 &#11088 </p>  
+                {% else %} 
+                <p>&#11088  &#11088</p>
+                {% endif %}
+                {% endwith %}
+            </td>
+            <td>
+                {% with a=i.Ds|add:j.Ds c=k.Ds %}
+                {% if  a|add:c >= 280 %}
+                   <p>&#11088 &#11088 &#11088 &#11088 &#11088</p>
+                {% elif 279 >= a|add:c and a|add:c > 250 %}
+                <p>&#11088 &#11088 &#11088 &#11088 </p>
+                {% elif 250 >= a|add:c  and a|add:c >= 200 %}
+                <p>&#11088 &#11088 &#11088</p>
+                {% elif 200 > a|add:c and a|add:c >= 100 %}
+                <p>&#11088 &#11088 </p>  
+                {% else %} 
+                <p>&#11088  &#11088</p>
+                {% endif %}
+                {% endwith %}
+            </td>
+            {% endfor %}
+            {% endfor %}
+            {% endfor %}
+        </tr>
+        </table>
+    </div>
+    </div>
+    <div class="right">
+        <div class="rcon">
+            <h2>Progress Graph</h2>
+        <img src="data:image/png;base64,{{ y }}" alt="pass" height="50%" ,width="50%">
+    </div>
+</div>
+</body>
+</html>
